@@ -1,0 +1,33 @@
+DataRoot: ./list_by_diagnosis/your_dataset
+Data_CLASSES: ['category_name0', 'category_name1']
+GPUs: [0,1,2,3]
+num_workers: 0
+Means: [0.5, 0.5, 0.5]
+Stds: [0.5, 0.5, 0.5]
+model: BasicNet_for_TN
+arch: resnet101
+Downsampling: 8
+Using_pooling: True
+Using_aggregation: False
+Using_cam: True
+Using_dilation: True
+Using_pretrained_weights: True
+Using_CRF: False
+in_channels: 3
+img_size: 512
+batchsize: 16
+mask_dilation: False
+rota_factor: dynamic
+zoom_factor: dynamic
+optim: Adam
+lr: 0.00004
+weight_decay: 0.0001
+momentum: 0.9
+lr_decay_freq: 10
+lr_decay: 0.65
+distill_temp: 1
+num_epoch: 100
+test_freq: 1
+save_model_freq: 1000
+Basic:
+  resume:
